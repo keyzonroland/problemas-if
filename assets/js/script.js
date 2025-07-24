@@ -23,7 +23,7 @@ function evaluarNumero() {
     }
     
     if (numero >= 1 && numero <= 100) {
-        if ((numero > 5 && numero < 15) || numero === 70 || numero === 55) {
+        if ((numero > 5 && numero <= 15) || numero === 70 || numero === 55) {
             alert(`El número ingresado tiene opciones de ganar`);
         } else {
             alert(`El número ingresado no es favorable`);

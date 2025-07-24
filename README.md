@@ -9,7 +9,7 @@ Proyecto desarrollado para el **Bootcamp Frontend - Módulo 4 - AE4.3** que cont
 - **Objetivo:** Evaluar si un número tiene probabilidad de ganar en un juego de azar
 - **Reglas:** 
   - Rango válido: números del 1 al 100
-  - Números favorables: > 5 y < 15, o números 55 y 70
+  - Números favorables: > 5 y ≤ 15 (6, 7, 8, 9, 10, 11, 12, 13, 14, 15), o números 55 y 70
 - **Resultado:** "El número ingresado tiene opciones de ganar" o "El número ingresado no es favorable"
 
 ### 📅 **Ejercicio 2: Año Bisiesto**
@@ -56,9 +56,11 @@ problemas-if/
 
 ### Ejercicio 1 (Números):
 - `10` → "Tiene opciones de ganar"
+- `15` → "Tiene opciones de ganar"
 - `55` → "Tiene opciones de ganar" 
 - `70` → "Tiene opciones de ganar"
 - `25` → "No es favorable"
+- `5` → "No es favorable"
 
 ### Ejercicio 2 (Años):
 - `2024` → "Es bisiesto"
