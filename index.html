@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Lógica con JavaScript</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Ejercicios de Lógica con JavaScript</h1>
+        
+        <!-- Ejercicio 1: Evaluador de Números -->
+        <div class="exercise">
+            <h2>🎲 Ejercicio 1: Evaluador de Números</h2>
+            <div class="description">
+                <h3>¿Cómo funciona?</h3>
+                <p>Este programa evalúa si un número ingresado tiene mayor probabilidad de ganar según reglas específicas.</p>
+            </div>
+            
+            <div class="rules">
+                <h3>📋 Reglas del juego:</h3>
+                <ul>
+                    <li><strong>Rango permitido:</strong> Números del 1 al 100</li>
+                    <li><strong>Números favorables:</strong>
+                        <ul>
+                            <li>Números mayores a 5 y menores o iguales a 15 (6, 7, 8, 9, 10, 11, 12, 13, 14, 15)</li>
+                            <li>El número 70</li>
+                            <li>El número 55</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <button onclick="evaluarNumero()">🎯 Evaluar Número</button>
+        </div>
+
+        <!-- Ejercicio 2: Año Bisiesto -->
+        <div class="exercise">
+            <h2>📅 Ejercicio 2: Año Bisiesto</h2>
+            <div class="description">
+                <h3>¿Cómo funciona?</h3>
+                <p>Este programa determina si un año es bisiesto según las reglas del calendario Gregoriano.</p>
+            </div>
+            
+            <div class="rules">
+                <h3>📋 Reglas del año bisiesto:</h3>
+                <ul>
+                    <li>Un año es <strong>bisiesto</strong> si es divisible entre 4 Y no divisible entre 100</li>
+                    <li>O bien, si es divisible entre 400</li>
+                    <li><strong>Ejemplos:</strong>
+                        <ul>
+                            <li>2024 → Bisiesto (divisible entre 4, no entre 100)</li>
+                            <li>1900 → No bisiesto (divisible entre 100, no entre 400)</li>
+                            <li>2000 → Bisiesto (divisible entre 400)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <button onclick="evaluarAnio()">📅 Evaluar Año</button>
+        </div>
+
+        <!-- Ejercicio 3: Set de Tenis -->
+        <div class="exercise">
+            <h2>🎾 Ejercicio 3: Evaluador de Set de Tenis</h2>
+            <div class="description">
+                <h3>¿Cómo funciona?</h3>
+                <p>Este programa ayuda al periodista Perio Dista a determinar si un set de tenis ha terminado y quién es el ganador.</p>
+            </div>
+            
+            <div class="rules">
+                <h3>🎾 Reglas del tenis:</h3>
+                <ul>
+                    <li>Para <strong>ganar un set</strong>, un jugador debe ganar <strong>6 juegos</strong></li>
+                    <li>Además debe haber ganado <strong>por lo menos 2 juegos más</strong> que su rival</li>
+                    <li>Si el set está <strong>empatado a 5</strong> juegos, el ganador es el <strong>primero en llegar a 7</strong></li>
+                    <li>Si está <strong>empatado a 6</strong>, se juega un <strong>tie-break</strong></li>
+                    <li><strong>Resultados posibles:</strong>
+                        <ul>
+                            <li><strong>"A ganó el set"</strong> - Cuando A cumple las condiciones de victoria</li>
+                            <li><strong>"B ganó el set"</strong> - Cuando B cumple las condiciones de victoria</li>
+                            <li><strong>"El set todavía no termina"</strong> - Cuando ninguno ha ganado aún</li>
+                            <li><strong>"El resultado es inválido"</strong> - Para casos como 8-6 o 7-3</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ejemplos válidos:</strong>
+                        <ul>
+                            <li>6-4 → A gana (6 juegos con diferencia de 2)</li>
+                            <li>7-5 → A gana (llegó a 7 desde empate a 5)</li>
+                            <li>6-6 → Tie-break requerido</li>
+                            <li>5-3 → Set continúa</li>
+                            <li>8-6 → Resultado inválido</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <button onclick="evaluarTenis()">🎾 Evaluar Set de Tenis</button>
+        </div>
+        
+        <div class="info">
+            <p><strong>Instrucciones:</strong> Haz clic en cualquier botón para ejecutar el ejercicio correspondiente.</p>
+            <p><em>Los resultados aparecerán en ventanas emergentes (alerts).</em></p>
+            <p><strong>💡 Tip:</strong> Para el ejercicio de tenis, ingresa los juegos ganados por cada jugador (A y B). Prueba casos como 6-4, 7-5, 6-6, 8-6, etc.</p>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
