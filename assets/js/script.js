@@ -77,25 +77,25 @@ function evaluarAnio() {
 // Función basada en la imagen proporcionada
 function resultadoTenis(juegosA, juegosB) {
     if (Number.isInteger(juegosA) && Number.isInteger(juegosB)) {
-        // Verificar si el jugador A ganó el set
-        if ((juegosA >= 6 && juegosA - juegosB >= 2) || (juegosA === 7 && juegosB === 6)) {
+        // PRIMERO: Verificar si es resultado inválido
+        if ((juegosA > 7 || juegosB > 7) || 
+            (juegosA === 7 && juegosB < 5) || 
+            (juegosB === 7 && juegosA < 5) ||
+            (juegosA > 6 && juegosB > 6 && Math.abs(juegosA - juegosB) > 1)) {
+            console.log('El resultado es inválido', 'a:', juegosA, 'b:', juegosB);
+            alert('El resultado es inválido');
+        }
+        // SEGUNDO: Verificar si el jugador A ganó el set
+        else if ((juegosA >= 6 && juegosA - juegosB >= 2) || (juegosA === 7 && juegosB === 6)) {
             console.log("A ganó el set", 'a:', juegosA, 'b:', juegosB);
             alert('A ganó el set');
         } 
-        // Verificar si el jugador B ganó el set
+        // TERCERO: Verificar si el jugador B ganó el set
         else if ((juegosB >= 6 && juegosB - juegosA >= 2) || (juegosB === 7 && juegosA === 6)) {
             console.log("B ganó el set", 'a:', juegosA, 'b:', juegosB);
             alert('B ganó el set');
         }
-        // Verificar si es resultado inválido
-        else if ((juegosA > 7 || juegosB > 7) || 
-                 (juegosA === 7 && juegosB < 5) || 
-                 (juegosB === 7 && juegosA < 5) ||
-                 (juegosA > 6 && juegosB > 6 && Math.abs(juegosA - juegosB) > 1)) {
-            console.log('El resultado es inválido (por ejemplo, 8-6 o 7-3)', 'a:', juegosA, 'b:', juegosB);
-            alert('El resultado es inválido (por ejemplo, 8-6 o 7-3)');
-        }
-        // En cualquier otro caso, el set todavía no termina
+        // CUARTO: En cualquier otro caso, el set todavía no termina
         else {
             console.log('El set todavía no termina', 'a:', juegosA, 'b:', juegosB);
             alert('El set todavía no termina');

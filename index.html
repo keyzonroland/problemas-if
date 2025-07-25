@@ -69,34 +69,39 @@
                 <p>Este programa ayuda al periodista Perio Dista a determinar si un set de tenis ha terminado y quién es el ganador.</p>
             </div>
             
-            <div class="rules">
+                <div class="rules">
                 <h3>🎾 Reglas del tenis:</h3>
                 <ul>
-                    <li>Para <strong>ganar un set</strong>, un jugador debe ganar <strong>6 juegos</strong></li>
+                    <li>Para <strong>ganar un set</strong>, un jugador debe ganar <strong>6 o más juegos</strong></li>
                     <li>Además debe haber ganado <strong>por lo menos 2 juegos más</strong> que su rival</li>
-                    <li>Si el set está <strong>empatado a 5</strong> juegos, el ganador es el <strong>primero en llegar a 7</strong></li>
-                    <li>Si está <strong>empatado a 6</strong>, se juega un <strong>tie-break</strong></li>
+                    <li>Con <strong>7 juegos</strong> solo son válidos los resultados <strong>7-5</strong> o <strong>7-6</strong></li>
+                    <li>Resultados como <strong>7-0, 7-1, 7-2, 7-3, 7-4</strong> son <strong>inválidos</strong> (y viceversa)</li>
                     <li><strong>Resultados posibles:</strong>
                         <ul>
                             <li><strong>"A ganó el set"</strong> - Cuando A cumple las condiciones de victoria</li>
                             <li><strong>"B ganó el set"</strong> - Cuando B cumple las condiciones de victoria</li>
                             <li><strong>"El set todavía no termina"</strong> - Cuando ninguno ha ganado aún</li>
-                            <li><strong>"El resultado es inválido"</strong> - Para casos como 8-6 o 7-3</li>
+                            <li><strong>"El resultado es inválido"</strong> - Para casos imposibles</li>
                         </ul>
                     </li>
                     <li><strong>Ejemplos válidos:</strong>
                         <ul>
                             <li>6-4 → A gana (6 juegos con diferencia de 2)</li>
-                            <li>7-5 → A gana (llegó a 7 desde empate a 5)</li>
-                            <li>6-6 → Tie-break requerido</li>
+                            <li>7-5 → A gana (único caso válido con 7 juegos)</li>
+                            <li>6-7 → B gana (único caso válido con 7 juegos para B)</li>
+                            <li>6-6 → Set continúa (empate)</li>
                             <li>5-3 → Set continúa</li>
-                            <li>8-6 → Resultado inválido</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ejemplos inválidos:</strong>
+                        <ul>
+                            <li>7-0, 7-1, 7-2, 7-3, 7-4 → Inválidos</li>
+                            <li>0-7, 1-7, 2-7, 3-7, 4-7 → Inválidos</li>
+                            <li>8-6, 6-8 → Inválidos (más de 7 juegos)</li>
                         </ul>
                     </li>
                 </ul>
-            </div>
-            
-            <button onclick="evaluarTenis()">🎾 Evaluar Set de Tenis</button>
+            </div>            <button onclick="evaluarTenis()">🎾 Evaluar Set de Tenis</button>
         </div>
         
         <div class="info">
